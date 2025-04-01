@@ -1,0 +1,89 @@
+|-- .env.local
+|-- .gitignore
+|-- app
+    |-- (auth)
+        |-- layout.tsx
+        |-- sign-in
+            |-- page.tsx
+        |-- sign-up
+            |-- page.tsx
+    |-- (root)
+        |-- interview
+            |-- page.tsx
+            |-- [id]
+                |-- feedback
+                    |-- page.tsx
+                |-- page.tsx
+        |-- layout.tsx
+        |-- page.tsx
+    |-- api
+        |-- vapi
+            |-- generate
+                |-- route.ts
+    |-- favicon.ico
+    |-- globals.css
+    |-- layout.tsx
+|-- components
+    |-- Agent.tsx
+    |-- AuthForm.tsx
+    |-- DisplayTechIcons.tsx
+    |-- FormField.tsx
+    |-- InterviewCard.tsx
+    |-- ui
+        |-- button.tsx
+        |-- form.tsx
+        |-- input.tsx
+        |-- label.tsx
+        |-- sonner.tsx
+|-- components.json
+|-- constants
+    |-- index.ts
+|-- eslint.config.mjs
+|-- firebase
+    |-- admin.ts
+    |-- client.ts
+|-- lib
+    |-- actions
+        |-- auth.action.ts
+        |-- general.action.ts
+    |-- utils.ts
+    |-- vapi.sdk.ts
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+    |-- ai-avatar.png
+    |-- calendar.svg
+    |-- covers
+        |-- adobe.png
+        |-- amazon.png
+        |-- facebook.png
+        |-- hostinger.png
+        |-- pinterest.png
+        |-- quora.png
+        |-- reddit.png
+        |-- skype.png
+        |-- spotify.png
+        |-- telegram.png
+        |-- tiktok.png
+        |-- yahoo.png
+    |-- file.svg
+    |-- globe.svg
+    |-- logo.svg
+    |-- pattern.png
+    |-- profile.svg
+    |-- react.svg
+    |-- robot.png
+    |-- star.svg
+    |-- tailwind.svg
+    |-- tech.svg
+    |-- upload.svg
+    |-- user-avatar.png
+    |-- window.svg
+|-- README.md
+|-- tsconfig.json
+|-- types
+    |-- index.d.ts
+    |-- vapi.d.ts
