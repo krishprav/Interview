@@ -97,20 +97,34 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
   const isSignIn = type === "sign-in";
 
-  return (
-    <div className="card-border lg:min-w-[566px]">
-      <div className="flex flex-col gap-6 card py-14 px-10">
-        <div className="flex flex-row gap-2 justify-center">
-          <Image src="/logo.svg" alt="logo" height={32} width={38} />
-          <h2 className="text-primary-100">100x Interview</h2>
+ return (
+    <div className="glass-panel lg:min-w-[566px] border border-white/20 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 overflow-hidden">
+      <div className="flex flex-col gap-8 p-12">
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <div className="glass-panel p-4 rounded-2xl backdrop-blur-lg border border-white/10 relative">
+            <div className="absolute inset-0 rounded-2xl border-2 border-red-500/30 animate-pulse" />
+            <Image 
+              src="/logo.svg" 
+              alt="logo" 
+              height={48} 
+              width={54}
+              className="hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <h2 className="text-4xl font-bold">
+            <span className="text-white">100</span>
+            <span className="text-red-500">x</span>
+            <span className="text-white"> Interview</span>
+          </h2>
+          <h3 className="text-white/80 text-center text-xl">
+            Practice job interviews with AI
+          </h3>
         </div>
-
-        <h3>Practice job interviews with AI</h3>
-
+  
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-full space-y-6 mt-4 form"
+            className="w-full space-y-8 form"
           >
             {!isSignIn && (
               <FormField
@@ -119,40 +133,48 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 label="Name"
                 placeholder="Your Name"
                 type="text"
+                inputClassName="glass-input focus:ring-2 focus:ring-red-500/50 rounded-none py-6 text-white"
               />
             )}
-
+  
             <FormField
               control={form.control}
               name="email"
               label="Email"
-              placeholder="Your email address"
+              placeholder="your@email.com"
               type="email"
+              inputClassName="glass-input focus:ring-2 focus:ring-red-500/50 rounded-xl py-6 text-white"
             />
-
+  
             <FormField
               control={form.control}
               name="password"
               label="Password"
-              placeholder="Enter your password"
+              placeholder="••••••••"
               type="password"
+              inputClassName="glass-input focus:ring-2 focus:ring-red-500/50 rounded-xl py-6 text-white"
             />
-
-            <Button className="btn" type="submit">
-              {isSignIn ? "Sign In" : "Create an Account"}
+  
+            <Button 
+              className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-300"
+              type="submit"
+            >
+              {isSignIn ? "Sign In" : "Create Account"}
             </Button>
           </form>
         </Form>
-
-        <p className="text-center">
-          {isSignIn ? "No account yet?" : "Have an account already?"}
-          <Link
-            href={!isSignIn ? "/sign-in" : "/sign-up"}
-            className="font-bold text-user-primary ml-1"
-          >
-            {!isSignIn ? "Sign In" : "Sign Up"}
-          </Link>
-        </p>
+  
+        <div className="glass-panel backdrop-blur-sm px-6 py-4 rounded-2xl border border-white/10">
+          <p className="text-center text-white/80">
+            {isSignIn ? "No account yet?" : "Have an account already?"}
+            <Link
+              href={!isSignIn ? "/sign-in" : "/sign-up"}
+              className="ml-2 font-semibold text-red-400 hover:text-red-300 underline-offset-4"
+            >
+              {!isSignIn ? "Sign In" : "Sign Up"}
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
