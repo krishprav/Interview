@@ -154,13 +154,13 @@ const Agent = ({
             <Image
               src="/ai-avatar.png"
               alt="profile-image"
-              width={65}
-              height={54}
+              width={539}
+              height={539}
               className="object-cover"
             />
             {isSpeaking && <span className="animate-speak" />}
           </div>
-          <h3>AI Interviewer</h3>
+          <h3>Harkirat Singh 100x Devs</h3>
         </div>
 
         {/* User Profile Card */}
