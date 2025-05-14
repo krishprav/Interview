@@ -156,7 +156,7 @@ const Agent = ({
               alt="profile-image"
               width={539}
               height={539}
-              className="object-cover"
+              className="rounded-full object-cover size-[120px]"
             />
             {isSpeaking && <span className="animate-speak" />}
           </div>
